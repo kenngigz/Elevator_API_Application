@@ -92,9 +92,9 @@ async function simulateElevatorMovement(elevator, fromFloor, toFloor) {
     fromFloor < toFloor ? fromFloor++ : fromFloor--;
 
     // Log the updated value
-    console.log("New value:", fromFloor + 2);
+    //console.log("New value:", fromFloor + 2);
     await elevator.update({
-      currentFloor: fromFloor < toFloor ? fromFloor + 2 : fromFloor,
+      currentFloor: fromFloor,
     });
     // Check the condition
     if (elevator.direction === "stopped") {
